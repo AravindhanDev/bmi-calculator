@@ -34,11 +34,12 @@ cal.addEventListener('click', function (e) {
 	e.preventDefault();
 });
 
-clear.addEventListener('click', function () {
+clear.addEventListener('click', function (e) {
 	output.innerHTML = '';
 	result.innerHTML = '';
 	cm.value = '';
 	kg.value = '';
+	e.preventDefault();
 });
 
 function bmiResult(bmi) {
@@ -50,10 +51,10 @@ function bmiResult(bmi) {
 		result.style.color = 'green';
 	} else if (bmi <= 29.9) {
 		result.innerHTML = 'over weight';
-		result.style.color = '#FFD700';
+		result.style.color = '#F7FD04';
 	} else if (bmi <= 34.9) {
 		result.innerHTML = 'severely over weight';
-		result.style.color = '#FAFF00';
+		result.style.color = '#FFFF00';
 	} else if (bmi <= 39.9) {
 		result.innerHTML = 'obese';
 		result.style.color = '#FC5404';
